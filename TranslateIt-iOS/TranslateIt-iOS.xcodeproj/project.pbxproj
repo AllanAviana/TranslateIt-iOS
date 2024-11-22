@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B85DD3772CF067620005AD71 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85DD3762CF067620005AD71 /* PressStart2P-Regular.ttf */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B85DD35A2CF055800005AD71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +31,25 @@
 		B85DD3492CF0557F0005AD71 /* TranslateIt-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TranslateIt-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85DD3592CF055800005AD71 /* TranslateIt-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TranslateIt-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85DD3632CF055800005AD71 /* TranslateIt-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TranslateIt-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B85DD3762CF067620005AD71 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B85DD3982CF067800005AD71 /* Exceptions for "TranslateIt-iOS" folder in "TranslateIt-iOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B85DD3482CF0557F0005AD71 /* TranslateIt-iOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B85DD34B2CF0557F0005AD71 /* TranslateIt-iOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B85DD3982CF067800005AD71 /* Exceptions for "TranslateIt-iOS" folder in "TranslateIt-iOS" target */,
+			);
 			path = "TranslateIt-iOS";
 			sourceTree = "<group>";
 		};
@@ -79,6 +97,7 @@
 				B85DD35C2CF055800005AD71 /* TranslateIt-iOSTests */,
 				B85DD3662CF055800005AD71 /* TranslateIt-iOSUITests */,
 				B85DD34A2CF0557F0005AD71 /* Products */,
+				B85DD3762CF067620005AD71 /* PressStart2P-Regular.ttf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85DD3772CF067620005AD71 /* PressStart2P-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +419,8 @@
 				DEVELOPMENT_TEAM = L3JTK2F3SR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TranslateIt-iOS/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +450,8 @@
 				DEVELOPMENT_TEAM = L3JTK2F3SR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TranslateIt-iOS/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
