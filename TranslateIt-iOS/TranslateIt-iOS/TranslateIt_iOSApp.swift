@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct TranslateIt_iOSApp: App {
+    @StateObject private var viewModel = ViewModel() // Criação única do ViewModel
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(ViewModel())
+           
+                ContentView()
+                    .environmentObject(viewModel) // Injeta o ViewModel no ambiente
+            
         }
     }
 }
+

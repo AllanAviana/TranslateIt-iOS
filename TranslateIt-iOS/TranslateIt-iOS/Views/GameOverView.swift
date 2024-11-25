@@ -1,17 +1,17 @@
 //
-//  ContentView.swift
+//  GameOverView.swift
 //  TranslateIt-iOS
 //
-//  Created by Allan Viana on 22/11/24.
+//  Created by Allan Viana on 25/11/24.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct GameOverView: View {
+    @EnvironmentObject var viewModel: ViewModel
     var body: some View {
         GeometryReader { geometry in
-            NavigationStack {
-                
+           
                 ZStack(alignment: .bottom) {
                     Color(.paleGreen)
                         .ignoresSafeArea()
@@ -25,48 +25,67 @@ struct ContentView: View {
                         }
                         
                         HStack{
-                            Text("Bem-vindo!")
+                            Text(viewModel.gameOverUiState.message)
                                 .font(.custom("PressStart2P-Regular", size: 32))
                                 .foregroundStyle(.darkForestGreen)
                             Spacer()
                         }.padding(.top, 90)
                         
                         HStack {
-                            Text("Adivinhe a traducao correta da palavra em ingles e ganhe pontos!")
+                            Text(viewModel.gameOverUiState.sentence)
                                 .font(.custom("PressStart2P-Regular", size: 14))
                                 .foregroundStyle(.mintGreen)
                                 .lineSpacing(8)
                             Spacer()
                         }.padding(.top, 20)
                         
-                        Image("WelcomeImage")
+                        Image(viewModel.gameOverUiState.image)
                             .scaledToFit()
-                            .padding(.top, geometry.size.height * 0.13)
+                            .padding(.top, calculateTopPadding(for: geometry.size))
                         Spacer()
+                            .navigationDestination(
+                                isPresented: $viewModel.returnToWelcome
+                            ) {
+                                ContentView()
+                            }
                         
                     }.padding(.horizontal, 30).zIndex(2)
                     
                     VStack {
-                        NavigationLink( destination: GameView()){
-                            Text("Jogar")
-                                .font(.custom("", size: 18 ))
-                                .foregroundStyle(Color.white)
+                        Button(action: {
+                            viewModel.resetGame()
                             
-                                .frame(width: 280,height: 50)
-                                .background(.darkForestGreen)
+                        }) {
+                            Text("Voltar")
+                                .font(.custom("", size: 18))
+                                .foregroundColor(.white)
+                                .frame(width: 280, height: 50)
+                                .background(.darkForestGreen) 
                                 .clipShape(RoundedRectangle(cornerRadius: 100))
-                            
-                        }.padding(.bottom,40 )
+                        }
+                        
+                        .padding(.bottom, 40)
+
                         
                         
                     }.frame(maxWidth: .infinity).frame(
                         height: geometry.size.height * 0.35, alignment: .bottom).background(.limeGlow)
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                
             }.navigationBarBackButtonHidden(true)
-        }
+       
     }
 }
 
+func calculateTopPadding(for size: CGSize) -> CGFloat {
+       if size.height > 800 {
+           return size.height * 0.13
+       } else {
+           return size.height * 0.08
+       }
+   }
+
 #Preview {
-    ContentView()
+    GameOverView()
 }

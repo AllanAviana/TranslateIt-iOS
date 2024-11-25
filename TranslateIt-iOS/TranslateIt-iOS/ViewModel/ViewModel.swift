@@ -9,7 +9,9 @@ import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published var gameUiState: GameUiState = GameUiState()
+    @Published var gameOverUiState: GameOverUiState = GameOverUiState()
     private var questions: [Question] = []
+    var returnToWelcome: Bool = false
     
     init(){
         startGame()
@@ -19,16 +21,23 @@ class ViewModel: ObservableObject {
         questions = gameQuestions.shuffled()
         gameUiState.word = questions[0].word
         gameUiState.options = questions[0].options
-       
+        print(gameUiState.isGameOver)
+
         
     }
     
     func updateGame(){
         if questions.isEmpty {
             gameUiState.isGameOver = true
+            print("vazio")
+
+            print(gameUiState.isGameOver)
+
             return
         }else {
             gameUiState.word = questions[0].word
+            print(gameUiState.isGameOver)
+
             gameUiState.options = questions[0].options.shuffled()
         }
     }
@@ -40,16 +49,53 @@ class ViewModel: ObservableObject {
             updateGame()
         }else {
             gameUiState.isGameOver = true
+            updateGameOverUiState()
+            print("Game Over Ativado: \(gameUiState.isGameOver)")
+            
+
         }
     }
     
     func resetGame(){
+        returnToWelcome = true
         gameUiState.isGameOver = false
         gameUiState.score = 0
         startGame()
+        print(gameUiState.isGameOver)
+
+        
+    }
+    
+    func checkImage(){
+        if gameUiState.score >= 100 {
+            gameOverUiState.image = "HappyEnd"
+        }else {
+            gameOverUiState.image = "BadEnd"
+        }
+    }
+    func checkSentence(){
+        if gameUiState.score >= 100 {
+            gameOverUiState.sentence = "Voce acertou muitas questoes!"
+        }else {
+            gameOverUiState.sentence = "Voce acertou poucas questoes.."
+        }
     }
     
     
+    func checkMessage(){
+        if gameUiState.score >= 100 {
+            gameOverUiState.message = "Parabens!"
+        }else {
+            gameOverUiState.message = "Melhore.."
+        }
+    }
+    
+    
+    func updateGameOverUiState(){
+        checkSentence()
+        checkMessage()
+        checkImage()
+    }
     
    
    
