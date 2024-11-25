@@ -8,28 +8,30 @@
 import SwiftUI
 
 struct GameView: View {
+    @EnvironmentObject var viewModel: ViewModel
     var body: some View {
         GeometryReader { geometry in
-            
             let list2 = ["Hello", "World", "SwiftUI", "Is"]
             
             ZStack(alignment: .bottom){
                 VStack{
                     Text("Translate It")
-                        .font(.custom("", size: 24))
+                        .font(.custom("PressStart2P-Regular", size: 24))
                         .frame(maxWidth: .infinity)
                         .frame(height: 55)
                         .foregroundColor(.white)
                         .background(.darkMossGreen)
                     ZStack(alignment: .top){
-                        Text("Score: 15")
+                        Text("Score:\(viewModel.gameUiState.score)")
+                            .font(.custom("PressStart2P-Regular", size: 18))
                             .frame(width: geometry.size.width * 0.6, height: 49)
                             .foregroundStyle(.white)
                             .background(.darkForestGreen)
                             .clipShape( RoundedRectangle(cornerRadius: 11))
                             .zIndex(1)
 
-                        Text("FOSTER")
+                        Text(viewModel.gameUiState.word)
+                            .font(.custom("Lalezar-Regular", size: 64))
                             .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.53)
                             .foregroundStyle(.white)
                             .background(.darkMossGreen)
@@ -44,40 +46,45 @@ struct GameView: View {
                 
                 VStack(){
                     
-                    ForEach(Array(stride(from: 0, to: list2.count, by: 2)), id: \.self) { index in
+                    ForEach(Array(stride(from: 0, to: viewModel.gameUiState.options.count, by: 2)), id: \.self) { index in
                         HStack {
-                            // Primeiro item
-                            Text(list2[index])
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 62)
-                                .background(.darkForestGreen)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .padding(.horizontal, 20)
-                                .padding(.vertical)
-                                .shadow(radius: 4, x: 0, y: 6)
-                                
-                            
-                            if index + 1 < list2.count {
-                                Text(list2[index + 1])
-                                    .font(.headline)
+                            Button(action: {
+                                viewModel.checkAnswer(viewModel.gameUiState.options[index])
+                            }) {
+                                Text(viewModel.gameUiState.options[index])
+                                    .font(.custom("PressStart2P-Regular", size: 14))
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 62)
                                     .background(.darkForestGreen)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .padding(.horizontal, 20)
+                                    .padding(.vertical)
                                     .shadow(radius: 4, x: 0, y: 6)
+                            }
+                                
+                            
+                            if index + 1 < list2.count {
+                                Button(action: {
+                                    viewModel.checkAnswer(viewModel.gameUiState.options[index + 1])
+                                }) {
+                                    Text(viewModel.gameUiState.options[index + 1])
+                                        .font(.custom("PressStart2P-Regular", size: 14))
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity)
+                                        .frame(height: 62)
+                                        .background(.darkForestGreen)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        .padding(.horizontal, 20)
+                                        .shadow(radius: 4, x: 0, y: 6)
+                                }
 
 
 
                             }
                         }
                     }
-                    
-                   
-                    
+
                 }.frame(maxWidth: .infinity).frame(
                     height: geometry.size.height * 0.3)
                 .background(.leafGreen)
