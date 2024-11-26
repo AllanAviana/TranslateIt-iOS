@@ -18,7 +18,14 @@
 ### Game Over - Congratulations
 <img src="TranslateIt-iOS/images/goodEndScreen.png" alt="Good End Screen" width="200">
 
+---
 
+## Technologies Used
+
+- **Swift**: Used to develop business logic and manage game states.
+- **SwiftUI**: Declarative framework for building the app's interface.
+- **MVVM Architecture**: Separates logic (ViewModel) from UI (Views).
+- **Xcode**: Development environment for creating and running the app.
 
 ---
 
