@@ -7,16 +7,18 @@
 ## Screenshots
 
 ### Welcome Screen
-![Welcome Screen](TranslateIt-iOS/images/welcomeScreen.png)
+<img src="TranslateIt-iOS/images/welcomeScreen.png" alt="Welcome Screen" width="200">
 
 ### Gameplay Screen
-![Gameplay Screen](TranslateIt-iOS/images/gameScreen.png)
+<img src="TranslateIt-iOS/images/gameScreen.png" alt="Gameplay Screen" width="200">
 
 ### Game Over - Improve
-![Game Over - Improve](TranslateIt-iOS/images/badEndScreen.png)
+<img src="TranslateIt-iOS/images/badEndScreen.png" alt="Bad End Screen" width="200">
 
 ### Game Over - Congratulations
-![Game Over - Congratulations](TranslateIt-iOS/images/goodEndScreen.png)
+<img src="TranslateIt-iOS/images/goodEndScreen.png" alt="Good End Screen" width="200">
+
+
 
 ---
 
