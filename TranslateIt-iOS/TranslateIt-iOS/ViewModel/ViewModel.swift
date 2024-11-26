@@ -29,10 +29,7 @@ class ViewModel: ObservableObject {
     func updateGame(){
         if questions.isEmpty {
             gameUiState.isGameOver = true
-            print("vazio")
-
-            print(gameUiState.isGameOver)
-
+            updateGameOverUiState()
             return
         }else {
             gameUiState.word = questions[0].word
