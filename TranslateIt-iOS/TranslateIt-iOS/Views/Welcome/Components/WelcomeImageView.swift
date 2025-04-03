@@ -9,11 +9,17 @@ import SwiftUI
 
 struct WelcomeImageView: View {
     let geometry: GeometryProxy
+    @State private var isVisible = false
     
     var body: some View {
         Image("WelcomeImage")
+            .resizable()
             .scaledToFit()
-            .padding(.top, geometry.size.height * 0.13)
+            .offset(x: isVisible ? 0 : -geometry.size.width)
+            .onAppear {
+                withAnimation(.easeOut(duration: 1)) {
+                    isVisible = true
+                }
+            }
     }
 }
-

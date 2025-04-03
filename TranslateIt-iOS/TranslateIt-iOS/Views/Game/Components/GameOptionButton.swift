@@ -13,7 +13,7 @@ struct GameOptionButton: View {
     var body: some View {
         Button(action: action) {
             Text(text)
-                .font(.custom("PressStart2P-Regular", size: 14))
+                .font(.custom("PottaOne-Regular", size: 24))
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 62)

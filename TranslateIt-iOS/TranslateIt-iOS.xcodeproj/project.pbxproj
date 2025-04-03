@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B85DD3772CF067620005AD71 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85DD3762CF067620005AD71 /* PressStart2P-Regular.ttf */; };
 		B8CA9D992CF451CE007A89CA /* Lalezar-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8CA9D982CF451CE007A89CA /* Lalezar-Regular.ttf */; };
+		B8CF5A682D8BCF68001980A4 /* PottaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8CF5A672D8BCF68001980A4 /* PottaOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		B85DD3632CF055800005AD71 /* TranslateIt-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TranslateIt-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85DD3762CF067620005AD71 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		B8CA9D982CF451CE007A89CA /* Lalezar-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lalezar-Regular.ttf"; sourceTree = "<group>"; };
+		B8CF5A672D8BCF68001980A4 /* PottaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PottaOne-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -101,6 +103,7 @@
 				B85DD34A2CF0557F0005AD71 /* Products */,
 				B85DD3762CF067620005AD71 /* PressStart2P-Regular.ttf */,
 				B8CA9D982CF451CE007A89CA /* Lalezar-Regular.ttf */,
+				B8CF5A672D8BCF68001980A4 /* PottaOne-Regular.ttf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +239,7 @@
 			files = (
 				B8CA9D992CF451CE007A89CA /* Lalezar-Regular.ttf in Resources */,
 				B85DD3772CF067620005AD71 /* PressStart2P-Regular.ttf in Resources */,
+				B8CF5A682D8BCF68001980A4 /* PottaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

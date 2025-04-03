@@ -15,7 +15,7 @@ struct GameWordView: View {
     var body: some View {
         ZStack(alignment: .top) {
             Text("Score: \(score)")
-                .font(.custom("PressStart2P-Regular", size: 18))
+                .font(.custom("PottaOne-Regular", size: 28))
                 .frame(width: geometry.size.width * 0.6, height: 49)
                 .foregroundStyle(.white)
                 .background(.darkForestGreen)

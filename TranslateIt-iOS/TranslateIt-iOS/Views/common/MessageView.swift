@@ -12,10 +12,11 @@ struct MessageView: View {
     var body: some View {
         HStack {
             Text(text)
-                .font(.custom("PressStart2P-Regular", size: 14))
+                .font(.custom("PottaOne-Regular", size: 18))
                 .foregroundStyle(.mintGreen)
                 .lineSpacing(8)
             Spacer()
-        }.padding(.top, 20)
+        }
+        .padding(.top, 1)
     }
 }

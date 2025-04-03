@@ -20,7 +20,7 @@ class ViewModel: ObservableObject {
     func startGame() {
         questions = gameQuestions.shuffled()
         gameUiState.word = questions[0].word
-        gameUiState.options = questions[0].options
+        gameUiState.options = questions[0].options.shuffled()
         print(gameUiState.isGameOver)
 
         
@@ -64,26 +64,26 @@ class ViewModel: ObservableObject {
     }
     
     func checkImage(){
-        if gameUiState.score >= 100 {
+        if gameUiState.score >= 50 {
             gameOverUiState.image = "HappyEnd"
         }else {
             gameOverUiState.image = "BadEnd"
         }
     }
     func checkSentence(){
-        if gameUiState.score >= 100 {
-            gameOverUiState.sentence = "Voce acertou muitas questoes!"
+        if gameUiState.score >= 50 {
+            gameOverUiState.sentence = "Voce acertou muitas\nquestoes!"
         }else {
-            gameOverUiState.sentence = "Voce acertou poucas questoes.."
+            gameOverUiState.sentence = "Voce acertou poucas\nquestoes.."
         }
     }
     
     
     func checkMessage(){
-        if gameUiState.score >= 100 {
+        if gameUiState.score >= 50 {
             gameOverUiState.message = "Parabens!"
         }else {
-            gameOverUiState.message = "Melhore.."
+            gameOverUiState.message = "Que pena!"
         }
     }
     

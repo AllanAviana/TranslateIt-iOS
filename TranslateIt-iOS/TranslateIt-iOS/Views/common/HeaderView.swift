@@ -12,16 +12,16 @@ struct HeaderView: View {
     var body: some View {
         HStack {
             Text("TranslateIt")
-                .font(.custom("PressStart2P-Regular", size: 14))
+                .font(.custom("PottaOne-Regular", size: 32))
                 .foregroundStyle(.darkForestGreen)
             Spacer()
         }
         
         HStack{
             Text(text)
-                .font(.custom("PressStart2P-Regular", size: 32))
+                .font(.custom("PottaOne-Regular", size: 24))
                 .foregroundStyle(.darkForestGreen)
             Spacer()
-        }.padding(.top, 80)
+        }.padding(.top, 30)
     }
 }

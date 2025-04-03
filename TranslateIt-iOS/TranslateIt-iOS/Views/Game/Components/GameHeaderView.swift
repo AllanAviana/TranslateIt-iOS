@@ -10,7 +10,7 @@ import SwiftUI
 struct GameHeaderView: View {
     var body: some View {
         Text("Translate It")
-            .font(.custom("PressStart2P-Regular", size: 24))
+            .font(.custom("PottaOne-Regular", size: 24))
             .frame(maxWidth: .infinity)
             .frame(height: 55)
             .foregroundColor(.white)
