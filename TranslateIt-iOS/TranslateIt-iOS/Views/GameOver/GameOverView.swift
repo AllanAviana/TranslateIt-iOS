@@ -49,6 +49,9 @@ struct GameOverView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationBarBackButtonHidden(true)
+            .onDisappear {
+                viewModel.returnToWelcome = false
+            }
         }
     }
 }
