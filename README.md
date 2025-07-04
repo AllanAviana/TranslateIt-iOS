@@ -4,21 +4,12 @@
 
 ---
 
-## Screenshots
+## Screenshots – iOS
 
-### Welcome Screen
-<img src="TranslateIt-iOS/images/welcomeScreen.png" alt="Welcome Screen" width="200">
+| Welcome Screen | Gameplay Screen | Game Over – Improve | Game Over – Congrats |
+|----------------|----------------|---------------------|----------------------|
+| <img src="TranslateIt-iOS/images/welcomeScreen.png"  alt="Welcome Screen"  width="300"> | <img src="TranslateIt-iOS/images/gameScreen.png"   alt="Gameplay Screen" width="300"> | <img src="TranslateIt-iOS/images/badEndScreen.png" alt="Bad End Screen"  width="300"> | <img src="TranslateIt-iOS/images/goodEndScreen.png" alt="Good End Screen" width="300"> |
 
-### Gameplay Screen
-<img src="TranslateIt-iOS/images/gameScreen.png" alt="Gameplay Screen" width="200">
-
-### Game Over - Improve
-<img src="TranslateIt-iOS/images/badEndScreen.png" alt="Bad End Screen" width="200">
-
-### Game Over - Congratulations
-<img src="TranslateIt-iOS/images/goodEndScreen.png" alt="Good End Screen" width="200">
-
----
 
 ## Technologies Used
 
