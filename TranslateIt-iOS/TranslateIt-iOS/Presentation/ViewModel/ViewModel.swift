@@ -10,7 +10,7 @@ import SwiftUI
 class ViewModel: ObservableObject {
     @Published var gameUiState: GameUiState = GameUiState()
     @Published var gameOverUiState: GameOverUiState = GameOverUiState()
-    private var questions: [Question] = []
+    var questions: [QuestionState] = []
     var returnToWelcome: Bool = false
     
     init(){
@@ -22,8 +22,6 @@ class ViewModel: ObservableObject {
         gameUiState.word = questions[0].word
         gameUiState.options = questions[0].options.shuffled()
         print(gameUiState.isGameOver)
-
-        
     }
     
     func updateGame(){
@@ -48,8 +46,6 @@ class ViewModel: ObservableObject {
             gameUiState.isGameOver = true
             updateGameOverUiState()
             print("Game Over Ativado: \(gameUiState.isGameOver)")
-            
-
         }
     }
     
@@ -59,8 +55,6 @@ class ViewModel: ObservableObject {
         gameUiState.score = 0
         startGame()
         print(gameUiState.isGameOver)
-
-        
     }
     
     func checkImage(){
@@ -78,7 +72,6 @@ class ViewModel: ObservableObject {
         }
     }
     
-    
     func checkMessage(){
         if gameUiState.score >= 50 {
             gameOverUiState.message = "Parabens!"
@@ -87,13 +80,9 @@ class ViewModel: ObservableObject {
         }
     }
     
-    
     func updateGameOverUiState(){
         checkSentence()
         checkMessage()
         checkImage()
     }
-    
-   
-   
 }
